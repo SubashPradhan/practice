@@ -1,0 +1,67 @@
+body{
+    margin: auto;
+}
+
+
+h1{
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    color: #228b22;
+}
+
+.first, .second{
+    font-size: 25px;
+    margin: 45px 25px 0 45px;
+
+}
+
+#firstTime{
+    color: rgb(22, 218, 22);
+}
+
+#secondTime{
+    color: #DA1622;
+}
+
+#firstTime, #secondTime{
+    font-size: 25px;
+    margin: 45px 0 0 25px;  
+}
+
+.initialTime, .finalTime{
+    font-size: 20px;
+    margin: 45px 45px 0 55px;
+}
+
+.initialTime{
+    color: #228b22;
+}
+
+.finalTime{
+    color: #DA1622
+}
+
+.finalResult {
+    font-size: 35px;
+    margin: 45px 0 0 500px;
+    color: #228b22;
+}
+
+.finalRound{
+    visibility: hidden;
+    color: #228b22;
+    transition-delay: 0.9s;
+}
+
+.actualResult{
+    font-size: 45px;
+    font-weight: bold;
+    margin: 20px 70px 0 0;
+    color: #cc6600;
+}
+
+button{
+    border: 2px solid black;
+    border-radius: 35%;
+}
