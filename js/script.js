@@ -12,9 +12,10 @@ $(document).ready(function(){
     
     $('#secondTime').click(function(){
         const finalDate = new Date(); //getting final hours
-        let finalHour = finalDate.getHours();
-        let finalMin = finalDate.getMinutes();
-        let finalSecond = finalDate.getSeconds();
+        const finalHour = finalDate.getHours();
+        const finalMin = finalDate.getMinutes();
+        const finalSecond = finalDate.getSeconds();
+    
         if ($('.initialTime').text().length === 0) {
             alert('PLEASE ENTER YOUR START TIME !!!');
         } else { 
@@ -34,7 +35,12 @@ $(document).ready(function(){
         $('.finalRound').click(function(){
             $('.actualResult').html(`Your working period is: ${secondsToTime(totalTimeInSecond)}`);
         })
-    });    
+    });   
     
+    // Video Background
+    $('.video').YTPlayer({
+        fittoBackground: true,
+        videoId: '5-LyRjHlRgQ'
+    });    
 })
     

@@ -1,6 +1,22 @@
 body{
     margin: auto;
+    max-width: auto;
 }
+
+.video{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height:100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    opacity: 1.0;
+    background-size: cover;
+}
+
 
 
 h1{
@@ -10,10 +26,15 @@ h1{
     color: #228b22;
 }
 
-.first, .second{
+.first{
     font-size: 25px;
     margin: 45px 25px 0 45px;
 
+}
+
+.second{
+    margin: 45px 0 0 90px;
+    font-size: 25px;
 }
 
 #firstTime{
@@ -26,19 +47,19 @@ h1{
 
 #firstTime, #secondTime{
     font-size: 25px;
-    margin: 45px 0 0 25px;  
+    margin: 45px 0 0 0;  
 }
 
 .initialTime, .finalTime{
-    font-size: 20px;
-    margin: 45px 45px 0 55px;
+    font-size: 25px;
+    margin: 45px 0 0 0;
 }
 
-.initialTime{
+.initialTime, .first{
     color: #228b22;
 }
 
-.finalTime{
+.finalTime, .second{
     color: #DA1622
 }
 
