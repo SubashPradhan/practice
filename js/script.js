@@ -6,24 +6,13 @@ $(document).ready(function () {
         let firstMin = firstDate.getMinutes();
         let firstSecond = firstDate.getSeconds();
         $('.initialTime').html(`Your start time is ${firstHour} hh: ${firstMin} mm: ${firstSecond} sec.`);
-
-    })
-
+    });
 
     $('#secondTime').click(function () {
         const finalDate = new Date(); //getting final hours
-        const finalHour = finalDate.getHours();
-        const finalMin = finalDate.getMinutes();
-        const finalSecond = finalDate.getSeconds();
-
-        if ($('.initialTime').text().length === 0) {
-            alert('PLEASE ENTER YOUR START TIME !!!');
-        } else {
-            $('.finalTime').html(`Your stop time is ${finalHour} hh: ${finalMin} mm: ${finalSecond} sec.`);
-            $('.finalRound').css({ 'visibility': 'visible' });
-
-        }
-
+        let finalHour = finalDate.getHours();
+        let finalMin = finalDate.getMinutes();
+        let finalSecond = finalDate.getSeconds();
         // Changing time to hours, min, sec respectively
         const totalTimeInSecond = (finalDate.getTime() - firstDate.getTime());
         let secondsToTime = (totalTimeInSecond) => {
@@ -33,17 +22,16 @@ $(document).ready(function () {
             return `${hours} HH: ${mins} MM: ${secs} SEC.`
         }
 
-
+        if ($('.initialTime').text().length === 0) {
+            alert("PLEASE ENTER YOUR START TIME !!!");
+        } else {
+            $('.finalTime').html(`Your stop time is ${finalHour} hh: ${finalMin} mm: ${finalSecond} sec.`);
+            $('.finalRound').css({ 'visibility': 'visible' });
+        }
+        
         $('.finalRound').click(function () {
             $('.actualResult').html(`Your working period is: ${secondsToTime(totalTimeInSecond)}`);
         })
-
     });
+});
 
-
-    // Video Background
-    $('.video').YTPlayer({
-        fittoBackground: true,
-        videoId: '5-LyRjHlRgQ'
-    });
-})
