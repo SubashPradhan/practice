@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,40 +18,33 @@
 </head>
 
 <body>
-    <div id="video-bg">
-        <iframe class="video"
-            src="https://www.youtube.com/embed/4lipnuOt4bs?autoplay=1&enablejsapi=1&rel=0&loop=1&playlist=4lipnuOt4bs&fs=0&showinfo=false"
-            frameborder="0" allowfullscreen allow="autoplay" controls=0></iframe>
-    </div>
     <h1>Let's check our working time</h1>
-
     <div class="mainContent">
-        <div class=" row starter">
-            <div class="col-lg-6">
-                <p class="first">Hit enter to get your initial time.</p>
-                <button id="firstTime">ENTER</button>
-            </div> 
-            <div class="col-lg-6">   
-                <p class="second">Hit enter to stop the time.</p>
-                <button id="secondTime">ENTER</button>
-            </div>
-        </div>    
+        <div id="video-bg">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/4lipnuOt4bs?autoplay=1&enablejsapi=1&rel=0&loop=1&playlist=4lipnuOt4bs&fs=0&showinfo=false"
+                frameborder="0" allowfullscreen allow="autoplay" controls=0></iframe>
+        </div>
+        <div class="row starter">
+            <p class="first col-lg-5">Hit enter to get your initial time.</p>
+            <button id="firstTime">ENTER</button>
+            <p class="second col-lg-5">Hit enter to stop the time.</p>
+            <button id="secondTime">ENTER</button>
+        </div>
+        
         <div class="results row">
-            <div class="initialTime col-lg-6">
-            </div>
+            <div class="initialTime col-lg-5"></div>
 
-            <div class="finalTime col-lg-6">
-            </div>
-        </div>    
+            <div class="finalTime col-lg-5"></div>
 
+        </div>
 
         <div class="finalResult">
             <button class="finalRound">Enter to get your Results</button>
         </div>
-
-        <div class="actualResult">
-        </div>
+        <div class="actualResult"></div>
     </div>
+
 </body>
 
 </html>
